@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Testing Graph</title>
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src="https://cdn.plot.ly/plotly-2.9.0.min.js"></script>
+</head>
+
+<div id="tester" style="width:600px;height:250px;"></div>
+<script>
+  const runGraphTest = () => {
+    fetch('/api/transit', {
+      method: 'GET'
+    })
+      .then((response) => response.json())
+      .then((transitData) => {
+        
+        const a = []
+        const b = []
+        var i = 0
+        for (const element of transitData) {
+            a[i] = element.Stop;
+            b[i] = element.Count;
+            i++
+        }
+        var data = [
+          {
+            x: a,
+
+            y: b,
+
+            type: 'bar'
+
+          }
+        ];
+
+        Plotly.newPlot('tester', data);
+
+      })
+      .catch((error) => {
+        console.error('Error:', error);
+      });
+  };
+
+  runGraphTest();
+  
+
+</script>
+
+</html>
+
+</html>
