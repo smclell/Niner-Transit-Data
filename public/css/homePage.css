@@ -1,0 +1,27 @@
+img{
+    width: 100px; 
+    height: 100px; 
+    object-fit: cover;
+    object-position: 20% 10%; 
+}
+
+#container{
+  margin-top: 500px;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+}
+
+.text-4xl{
+  font-family: 'Arial Black', 'Arial Bold', Gadget, sans-serif;
+  color: white;
+}
+
+.text-6xl{
+  font-family: 'Arial Black', 'Arial Bold', Gadget, sans-serif;
+  color: white;
+}
+
+button{
+  color: blue;
+}
