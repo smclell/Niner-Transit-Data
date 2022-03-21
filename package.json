@@ -5,8 +5,11 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js",
-    "watch": "nodemon server.js"
+    "start": "concurrently npm:dev:*",
+    "dev:server": "node server.js",
+    "watch": "nodemon server.js",
+    "dev:hpg": "npx tailwindcss -i ./public/inp-css/homePage.css -o ./public/out-css/hpgStyles.css",
+    "dev:dash": "npx tailwindcss -i ./public/inp-css/graphPage.css -o ./public/out-css/dashStyles.css"
   },
   "author": "",
   "license": "ISC",
