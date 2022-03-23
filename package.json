@@ -9,7 +9,8 @@
     "dev:server": "node server.js",
     "watch": "nodemon server.js",
     "dev:hpg": "npx tailwindcss -i ./public/inp-css/homePage.css -o ./public/out-css/hpgStyles.css",
-    "dev:dash": "npx tailwindcss -i ./public/inp-css/graphPage.css -o ./public/out-css/dashStyles.css"
+    "dev:dash": "npx tailwindcss -i ./public/inp-css/graphPage.css -o ./public/out-css/dashStyles.css",
+    "dev:about": "npx tailwindcss -i ./public/inp-css/aboutPage.css -o ./public/out-css/abtStyles.css"
   },
   "author": "",
   "license": "ISC",
@@ -18,6 +19,7 @@
     "express": "^4.16.3"
   },
   "devDependencies": {
+    "concurrently": "^7.0.0",
     "tailwindcss": "^3.0.23"
   }
 }
