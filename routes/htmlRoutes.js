@@ -19,5 +19,8 @@ module.exports = (app) => {
   app.get('/graphs', (req, res) => {
     res.sendFile(path.join(__dirname, '../public/TestingGraph.html'));
   });
+  app.get('/about', (req, res) => {
+    res.sendFile(path.join(__dirname, '../public/aboutPage.html'));
+  });
 
 };
