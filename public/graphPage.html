@@ -12,15 +12,17 @@
 </head>
 
 <body class="mb-12">
-  <div class="flex">
-    <div class="flex-none">
-      <div class="py-4 px-3 bg-green-900">
-        <a id="homeBtn" class="flex cursor-pointer pl-2.5 mb-5">
-          <img src="/media/logo.png" alt="UNCC-logo" />
-          <span class="self-center text-3xl font-semibold whitespace-nowrap dark:text-white">pats.</span>
-        </a>
-        <ul class="space-y-2">
-          <li>
+  <div class="sticky top-0 z-50">
+    <div class="">
+      <div class="flex py-4 px-3 bg-green-900">
+        <div class="flex-1 w-1/2">
+          <a id="homeBtn" class="flex cursor-pointer pl-2.5">
+            <img src="/media/logo.png" alt="UNCC-logo" />
+            <span class="self-center text-3xl font-semibold whitespace-nowrap dark:text-white">pats.</span>
+          </a>
+        </div>
+        <ul class="space-y-2 mt-3 mr-6">
+          <li class="mb-6">
             <p href="#" class="flex items-center p-2 text-base font-normal rounded-lg text-gray-400 animate-pulse">
               <svg class="w-6 h-6 fill-current text-gray-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                 <path
@@ -42,20 +44,20 @@
         </ul>
       </div>
     </div>
-    <div class="flex-1 w-64 p-12 pr-16">
-      <h1 class="text-right text-5xl">2020</h1>
-      <hr>
-      <img class='pt-3' class="h-8" src="/media/homepage.png" style="background-position: center center;
-      background-repeat: no-repeat;
-      background-attachment: fixed;
-      background-size: cover; width:100%; height: 200px; object-fit: none;" alt="banner-img">
-    </div>
   </div>
-  <div class="flex lg:flex-row sm:flex-col lg:justify-center sm:justify-around mx-16 sm:mt-12 lg:mt-0">
-    <div class="flex-initial mr-8 lg:w-4/12 sm:w-full rounded border-2 border-slate-50 shadow-xl">
+  <div class=" p-12 pr-16">
+    <h1 class="text-right text-5xl">2020</h1>
+    <hr>
+    <img class='pt-3' class="h-8" src="/media/homepage.png" style="background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover; width:100%; height: 200px; object-fit: none;" alt="banner-img">
+  </div>
+  <div class="flex lg:flex-row sm:flex-col lg:justify-center h-80 sm:justify-around mx-16 mb-6 sm:mt-12 lg:mt-0">
+    <div class="flex-initial mr-8 lg:w-4/12 w-full sm:w-full h-80 rounded border-2 border-slate-50 shadow-xl">
       <p class="text-center pt-3">Bar Chart - Number of Passengers Per Hours</p>
-      <div class="p-6">
-        <div id="tester" style="width:600px;height:600px;"></div>
+      <div class="p-6 w-full">
+        <div id="tester" class="w-full h-64"></div>
         <script>
           const runGraphTest = () => {
             fetch('/api/transit2', {
@@ -101,7 +103,7 @@
     <div class="flex-initial mr-8 lg:w-4/12 sm:w-full rounded border-2 border-slate-50 shadow-xl">
       <p class="text-center pt-3">Stack Bar Chart</p>
       <div class="p-6">
-        <div id="StackBar" style="width:600px;height:600px;"></div>
+        <div id="StackBar" class="w-96 h-60"></div>
         <script>
 
           const runStackedBar = () => {
@@ -151,10 +153,10 @@
         </script>
       </div>
     </div>
-    <div class="flex-initial mr-8 lg:w-4/12 sm:w-full rounded border-2 border-slate-50 shadow-xl">
+    <div class="flex-initial mr-8 lg:w-4/12  sm:w-full rounded border-2 border-slate-50 shadow-xl">
       <p class="text-center pt-3">Pie Chart - Most Popular Stops - BS Data </p>
       <div class="p-6">
-        <div id="PieChart" style="width:600px;height:600px;"></div>
+        <div id="PieChart" class="w-full h-60"></div>
         <script>
           const runPieChart = () => {
             fetch('/api/transit', {
@@ -181,11 +183,12 @@
                   }
                 ];
                 var layout = {
-                  height: 600,
-                  width: 600
+                  height: 255,
+                  width: 384
                 };
+                var config = { responsive: true }
 
-                Plotly.newPlot('PieChart', data, layout);
+                Plotly.newPlot('PieChart', data, layout, config);
 
               })
               .catch((error) => {
@@ -204,11 +207,11 @@
 
 
 
-  <div class="flex justify-center h-96 mx-16 sm:mt-12 lg:mt-12">
-    <div class="flex-initial mr-8 h-96 w-1/2 rounded border-2 border-slate-50 shadow-xl">
+  <div class="flex lg:flex-row sm:flex-col lg:justify-center sm:justify-around mx-16 mb-6 sm:mt-12 lg:mt-0">
+    <div class="flex-initial mr-8 h-96 lg:w-1/2 sm:w-full rounded border-2 border-slate-50 shadow-xl">
       <p class="text-center pt-3">Scatter Plot</p>
       <div class="p-6">
-        <div id="ScatterPlot" style="width:850px;height:300px;"></div>
+        <div id="ScatterPlot" style="width:600px;height:300px;"></div>
         <script>
           const runScatterPlot = () => {
             fetch('/api/transit2', {
@@ -239,7 +242,7 @@
                 var layout = {
 
                 };
-
+                var config = { responsive: true }
                 Plotly.newPlot('ScatterPlot', data, layout);
 
               })
@@ -254,10 +257,10 @@
 
       </div>
     </div>
-    <div class="flex-initial mr-8 h-96 w-1/2 rounded border-2 border-slate-50 shadow-xl">
+    <div class="flex-initial mr-8 h-96 lg:w-1/2 sm:w-full rounded border-2 border-slate-50 shadow-xl">
       <p class="text-center pt-3">Number of bus riders from 12am - 6am</p>
       <div class="p-6">
-        <div id="LineChart" style="width:850px;height:300px;"></div>
+        <div id="LineChart" style="width:600px;height:300px;"></div>
         <script>
           const runLineChart = () => {
             fetch('/api/transit', {
@@ -297,11 +300,11 @@
   </div>
 
 
-  <div class="flex justify-center h-96 mx-16 sm:mt-12 lg:mt-12">
-    <div class="flex-initial mr-8 h-96 w-1/2 rounded border-2 border-slate-50 shadow-xl">
+  <div class="flex lg:flex-row sm:flex-col lg:justify-center sm:justify-around mx-16 sm:mt-12 lg:mt-0">
+    <div class="flex-initial mr-8 h-96 lg:w-1/2 sm:w-full rounded border-2 border-slate-50 shadow-xl">
       <p class="text-center pt-3">Morning vs Afternoon Bus Riders</p>
       <div class="p-6">
-        <div id="DoubleLineChart" style="width:700px;height:315px;"></div>
+        <div id="DoubleLineChart" style="width:600px;height:315px;"></div>
         <script>
           const runDoubleLineChart = () => {
             fetch('/api/transit', {
@@ -347,10 +350,10 @@
         </script>
       </div>
     </div>
-    <div class="flex-initial mr-8 h-96 w-8/12 rounded border-2 border-slate-50 shadow-xl">
+    <div class="flex-initial mr-8 h-96 lg:w-8/12 sm:w-full rounded border-2 border-slate-50 shadow-xl">
       <p class="text-center pt-3">Bubble Chart</p>
       <div class="p-6">
-        <div id="BubbleChart" style="width:900px;height:320px;"></div>
+        <div id="BubbleChart" style="width:600px;height:320px;"></div>
         <script>
           const runBubbleChart = () => {
             fetch('/api/transit2', {
@@ -368,7 +371,7 @@
                   i++
                 }
                 var trace1 = {
-                  x: a,
+                  x: ["12:00 AM", "1:00 AM", "2:00 AM", "3:00 AM", "4:00 AM", "7:00 AM"],
                   y: b,
                   mode: 'markers',
                   marker: {
