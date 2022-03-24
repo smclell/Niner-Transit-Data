@@ -3,6 +3,7 @@
 // These data sources hold arrays of information on table-data, waitinglist, etc.
 
 const transitData = require('../data/July2020TransitData');
+const TimeVsPassengers = require('../data/TimeVsPassengers2020-2021');
 
 // ROUTING
 
@@ -14,4 +15,5 @@ module.exports = (app) => {
   // ---------------------------------------------------------------------------
 
   app.get('/api/transit', (req, res) => res.json(transitData));
+  app.get('/api/transit2', (req, res) => res.json(TimeVsPassengers));
 }
