@@ -11,14 +11,15 @@
   <link rel="stylesheet" href="/out-css/dashStyles.css">
 </head>
 
-<body class="mb-12">
+<body class="mb-12 bg-slate-100">
   <div class="sticky top-0 z-50">
     <div class="">
       <div class="flex py-4 px-3 bg-green-900">
         <div class="flex-1 w-1/2">
-          <a id="homeBtn" class="flex cursor-pointer pl-2.5">
-            <img src="/media/logo.png" alt="UNCC-logo" />
-            <span class="self-center text-3xl font-semibold whitespace-nowrap dark:text-white">pats.</span>
+          <a id="homeBtn" class="flex pl-2.5">
+            <img src="/media/logo.png" class="cursor-pointer " alt="UNCC-logo" />
+            <span
+              class="self-center cursor-pointer  text-3xl font-semibold whitespace-nowrap dark:text-white">pats.</span>
           </a>
         </div>
         <ul class="space-y-2 mt-3 mr-6">
@@ -53,10 +54,12 @@
     background-attachment: fixed;
     background-size: cover; width:100%; height: 200px; object-fit: none;" alt="banner-img">
   </div>
-  <div class="flex lg:flex-row sm:flex-col lg:justify-center h-80 sm:justify-around mx-16 mb-6 sm:mt-12 lg:mt-0">
-    <div class="flex-initial mr-8 lg:w-4/12 w-full sm:w-full h-80 rounded border-2 border-slate-50 shadow-xl">
-      <p class="text-center pt-3">Bar Chart - Number of Passengers Per Hours</p>
-      <div class="p-6 w-full">
+  <div class="flex lg:flex-row  sm:flex-col lg:justify-center h-80 sm:justify-around mx-16 mb-6 sm:mt-12 lg:mt-0">
+    <div class="flex-initial bg-white mr-8 lg:w-4/12 w-full sm:w-full h-80 rounded border-2 border-slate-50 shadow-xl">
+      <p class="ml-3 font-extrabold text-lg pt-3">Number of Passengers Per Hours</p>
+      <p class="ml-6 text-slate-400">Bar Chart</p>
+      <hr>
+      <div class="w-full">
         <div id="tester" class="w-full h-64"></div>
         <script>
           const runGraphTest = () => {
@@ -100,9 +103,11 @@
 
       </div>
     </div>
-    <div class="flex-initial mr-8 lg:w-4/12 sm:w-full rounded border-2 border-slate-50 shadow-xl">
-      <p class="text-center pt-3">Stack Bar Chart</p>
-      <div class="p-6">
+    <div class="flex-initial mr-8 bg-white lg:w-4/12 sm:w-full rounded border-2 border-slate-50 shadow-xl">
+      <p class="ml-3 font-extrabold text-lg pt-3">Number of Passengers Per Hours</p>
+      <p class="ml-6 text-slate-400">Stack Bar Chart</p>
+      <hr>
+      <div class="">
         <div id="StackBar" class="w-96 h-60"></div>
         <script>
 
@@ -153,9 +158,11 @@
         </script>
       </div>
     </div>
-    <div class="flex-initial mr-8 lg:w-4/12  sm:w-full rounded border-2 border-slate-50 shadow-xl">
-      <p class="text-center pt-3">Pie Chart - Most Popular Stops - BS Data </p>
-      <div class="p-6">
+    <div class="flex-initial mr-8 lg:w-4/12 bg-white sm:w-full rounded border-2 border-slate-50 shadow-xl">
+      <p class="ml-3 font-extrabold text-lg pt-3">Most Popular Stops</p>
+      <p class="ml-6 text-slate-400">Pie Chart</p>
+      <hr>
+      <div class="">
         <div id="PieChart" class="w-full h-60"></div>
         <script>
           const runPieChart = () => {
@@ -208,9 +215,11 @@
 
 
   <div class="flex lg:flex-row sm:flex-col lg:justify-center sm:justify-around mx-16 mb-6 sm:mt-12 lg:mt-0">
-    <div class="flex-initial mr-8 h-96 lg:w-1/2 sm:w-full rounded border-2 border-slate-50 shadow-xl">
-      <p class="text-center pt-3">Scatter Plot</p>
-      <div class="p-6">
+    <div class="flex-initial mr-8 h-96 bg-white lg:w-1/2 sm:w-full rounded border-2 border-slate-50 shadow-xl">
+      <p class="ml-3 font-extrabold text-lg pt-3">Most Popular Stops</p>
+      <p class="ml-6 text-slate-400">Scatter Plot</p>
+      <hr>
+      <div class="">
         <div id="ScatterPlot" style="width:600px;height:300px;"></div>
         <script>
           const runScatterPlot = () => {
@@ -257,9 +266,11 @@
 
       </div>
     </div>
-    <div class="flex-initial mr-8 h-96 lg:w-1/2 sm:w-full rounded border-2 border-slate-50 shadow-xl">
-      <p class="text-center pt-3">Number of bus riders from 12am - 6am</p>
-      <div class="p-6">
+    <div class="flex-initial mr-8 h-96 bg-white lg:w-1/2 sm:w-full rounded border-2 border-slate-50 shadow-xl">
+      <p class="ml-3 font-extrabold text-lg pt-3">Number of bus riders from 12am - 6am</p>
+      <p class="ml-6 text-slate-400">Trend Chart</p>
+      <hr>
+      <div class="">
         <div id="LineChart" style="width:600px;height:300px;"></div>
         <script>
           const runLineChart = () => {
@@ -301,9 +312,11 @@
 
 
   <div class="flex lg:flex-row sm:flex-col lg:justify-center sm:justify-around mx-16 sm:mt-12 lg:mt-0">
-    <div class="flex-initial mr-8 h-96 lg:w-1/2 sm:w-full rounded border-2 border-slate-50 shadow-xl">
-      <p class="text-center pt-3">Morning vs Afternoon Bus Riders</p>
-      <div class="p-6">
+    <div class="flex-initial mr-8 bg-white h-96 lg:w-1/2 sm:w-full rounded border-2 border-slate-50 shadow-xl">
+      <p class="ml-3 font-extrabold text-lg pt-3">Morning vs Afternoon Bus Riders</p>
+      <p class="ml-6 text-slate-400">Pie Chart</p>
+      <hr>
+      <div class="">
         <div id="DoubleLineChart" style="width:600px;height:315px;"></div>
         <script>
           const runDoubleLineChart = () => {
@@ -350,9 +363,11 @@
         </script>
       </div>
     </div>
-    <div class="flex-initial mr-8 h-96 lg:w-8/12 sm:w-full rounded border-2 border-slate-50 shadow-xl">
-      <p class="text-center pt-3">Bubble Chart</p>
-      <div class="p-6">
+    <div class="flex-initial mr-8 h-96 bg-white lg:w-8/12 sm:w-full rounded border-2 border-slate-50 shadow-xl">
+      <p class="ml-3 font-extrabold text-lg pt-3">Most Popular Stops</p>
+      <p class="ml-6 text-slate-400">Bubble Chart</p>
+      <hr>
+      <div class="">
         <div id="BubbleChart" style="width:600px;height:320px;"></div>
         <script>
           const runBubbleChart = () => {
