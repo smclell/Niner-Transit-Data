@@ -55,47 +55,13 @@
     <div class="flex-initial mr-8 lg:w-4/12 sm:w-full rounded border-2 border-slate-50 shadow-xl">
       <p class="text-center pt-3">Bar Chart - Number of Passengers Per Hours</p>
       <div class="p-6">
-        <div id="tester" style="width:600px;height:600px;"></div>
-        <script>
-          const runGraphTest = () => {
-            fetch('/api/transit2', {
-              method: 'GET'
-            })
-              .then((response) => response.json())
-              .then((TimeVsPassengers) => {
-
-                const a = []
-                const b = []
-                var i = 0
-                for (const element of TimeVsPassengers) {
-                  a[i] = element.Time;
-                  b[i] = element.Riders;
-                  i++
-                }
-                var data = [
-                  {
-                    x: a,
-
-                    y: b,
-
-                    type: 'bar'
-
-                  }
-                ];
-
-                Plotly.newPlot('tester', data);
-
-              })
-              .catch((error) => {
-                console.error('Error:', error);
-              });
-          };
-
-          runGraphTest();
-
-
-        </script>
-
+        <a href="https://plotly.com/~testingforproject78694/10/?share_key=ScZ246rcbGvSalI9Y6ptqB" target="_blank"
+          title="testingGraph" style="display: block; text-align: center;"><img
+            src="https://plotly.com/~testingforproject78694/10.png?share_key=ScZ246rcbGvSalI9Y6ptqB" alt="testingGraph"
+            style="max-width: 100%;width: 600px; height: 600px;" width="600" height="600"
+            onerror="this.onerror=null;this.src='https://plotly.com/404.png';" /></a>
+        <script data-plotly="testingforproject78694:10" sharekey-plotly="ScZ246rcbGvSalI9Y6ptqB"
+          src="https://plotly.com/embed.js" async></script>
       </div>
     </div>
     <div class="flex-initial mr-8 lg:w-4/12 sm:w-full rounded border-2 border-slate-50 shadow-xl">

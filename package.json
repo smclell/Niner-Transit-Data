@@ -16,7 +16,9 @@
   "license": "ISC",
   "dependencies": {
     "bulma": "^0.9.3",
-    "express": "^4.16.3"
+    "express": "^4.16.3",
+    "mongoose": "^6.2.9",
+    "plotly": "^1.0.6"
   },
   "devDependencies": {
     "concurrently": "^7.0.0",
