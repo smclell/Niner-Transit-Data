@@ -636,6 +636,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   flex: 0 1 auto;
 }
 
+.basis-1\/4 {
+  flex-basis: 25%;
+}
+
 .-translate-y-20 {
   --tw-translate-y: -5rem;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
@@ -696,6 +700,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   justify-content: center;
 }
 
+.justify-between {
+  justify-content: space-between;
+}
+
 .justify-around {
   justify-content: space-around;
 }
@@ -744,6 +752,15 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .border-2 {
   border-width: 2px;
+}
+
+.border-b-4 {
+  border-bottom-width: 4px;
+}
+
+.border-green-900 {
+  --tw-border-opacity: 1;
+  border-color: rgb(20 83 45 / var(--tw-border-opacity));
 }
 
 .border-slate-50 {
@@ -813,6 +830,14 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-right: 1rem;
 }
 
+.pl-2\.5 {
+  padding-left: 0.625rem;
+}
+
+.pl-2 {
+  padding-left: 0.5rem;
+}
+
 .pr-16 {
   padding-right: 4rem;
 }
@@ -825,12 +850,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-left: 6rem;
 }
 
-.pl-2\.5 {
-  padding-left: 0.625rem;
-}
-
-.pl-2 {
-  padding-left: 0.5rem;
+.pt-6 {
+  padding-top: 1.5rem;
 }
 
 .pl-14 {
@@ -993,6 +1014,16 @@ Ensure the default browser behavior of the `hidden` attribute.
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
+.hover\:scale-125:hover {
+  --tw-scale-x: 1.25;
+  --tw-scale-y: 1.25;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.hover\:border-b-8:hover {
+  border-bottom-width: 8px;
+}
+
 .hover\:bg-gray-100:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(243 244 246 / var(--tw-bg-opacity));
@@ -1001,6 +1032,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 .hover\:bg-green-700:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(21 128 61 / var(--tw-bg-opacity));
+}
+
+.hover\:pt-5:hover {
+  padding-top: 1.25rem;
 }
 
 @media (prefers-color-scheme: dark) {

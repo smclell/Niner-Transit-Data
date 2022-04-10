@@ -47,8 +47,23 @@
     </div>
   </div>
   <div class=" p-12 pr-16">
-    <h1 class="text-right text-5xl">2020</h1>
-    <hr>
+    <div class="flex flex-row">
+      <div class="basis-1/4">
+        <div class="flex justify-between">
+          <!-- transition ease-in-out delay-150 border-b-4 hover:border-b-8 border-green-900 pt-6 hover:pt-5 -->
+          <a id="2018"
+            class="transition ease-in-out delay-150 border-b-4 pt-6 border-green-900 hover:scale-125">2018</a>
+          <a id="2020"
+            class="transition ease-in-out delay-150 border-b-4 pt-6 border-green-900 hover:scale-125">2020</a>
+          <a id="2021"
+            class="transition ease-in-out delay-150 border-b-4 pt-6 border-green-900 hover:scale-125">2021</a>
+        </div>
+      </div>
+      <div class="basis-1/4"></div>
+      <div class="basis-1/4"></div>
+      <h1 class="text-right text-5xl w-full basis-1/4">2019</h1>
+    </div>
+    <hr style="padding-top: 2px;">
     <img class='pt-3' class="h-8" src="/media/homepage.png" style="background-position: center center;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -421,6 +436,10 @@
 <script>
   var homeBtn = document.getElementById('homeBtn');
   var aboutBtn = document.getElementById('aboutBtn');
+  const btn2018 = document.getElementById('2018');
+  const btn2020 = document.getElementById('2020');
+  const btn2021 = document.getElementById('2021');
+
 
   const runTransitQuery = () => {
     fetch('/api/transit', {
@@ -446,7 +465,15 @@
   aboutBtn.onclick = function () {
     window.location = '/about';
   }
-
+  btn2018.onclick = function () {
+    window.location = '/dashboard-2018';
+  }
+  btn2020.onclick = function () {
+    window.location = '/dashboard-2020';
+  }
+  btn2021.onclick = function () {
+    window.location = '/dashboard-2021';
+  }
   runTransitQuery();
 </script>
 
