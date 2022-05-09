@@ -19,9 +19,6 @@ module.exports = (app) => {
   app.get('/dashboard-2020', (req, res) => {
     res.sendFile(path.join(__dirname, '../public/dashB-2020.html'));
   });
-  app.get('/dashboard-2021', (req, res) => {
-    res.sendFile(path.join(__dirname, '../public/dashB-2021.html'));
-  });
   app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, '../public/home.html'));
   });
