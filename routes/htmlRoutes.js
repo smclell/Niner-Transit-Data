@@ -10,8 +10,17 @@ module.exports = (app) => {
   // Below code handles when users "visit" a page.
   // In each of the below cases the user is shown an HTML page of content
 
-  app.get('/home', (req, res) => {
-    res.sendFile(path.join(__dirname, '../public/graphPage.html'));
+  app.get('/dashboard-2018', (req, res) => {
+    res.sendFile(path.join(__dirname, '../public/dashB-2018.html'));
+  });
+  app.get('/dashboard-2019', (req, res) => {
+    res.sendFile(path.join(__dirname, '../public/dashB-2019.html'));
+  });
+  app.get('/dashboard-2020', (req, res) => {
+    res.sendFile(path.join(__dirname, '../public/dashB-2020.html'));
+  });
+  app.get('/dashboard-2021', (req, res) => {
+    res.sendFile(path.join(__dirname, '../public/dashB-2021.html'));
   });
   app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, '../public/home.html'));

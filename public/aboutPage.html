@@ -11,18 +11,21 @@
 
 <body>
 
-  <body class="mb-12">
-    <div class="flex">
-      <div class="flex-none">
-        <div class="py-4 px-3 bg-green-900">
-          <a href="#" id="homeBtn" class="flex cursor-pointer pl-2.5 mb-5">
-            <img src="/media/logo.png" alt="UNCC-logo" />
-            <span class="self-center text-3xl font-semibold whitespace-nowrap dark:text-white">pats.</span>
-          </a>
-          <ul class="space-y-2">
-            <li>
-              <a id="dashBtn" href="#"
-                class="flex items-center cursor-pointer p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-600 transition ease-in-out delay-150 hover:-translate-y-1">
+  <body class="mb-12 bg-slate-100">
+    <div class="sticky top-0 z-50">
+      <div class="">
+        <div class="flex py-4 px-3 bg-green-900">
+          <div class="flex-1 w-1/2">
+            <a id="homeBtn" class="flex pl-2.5">
+              <img src="/media/logo.png" class="cursor-pointer " alt="UNCC-logo" />
+              <span
+                class="self-center cursor-pointer  text-3xl font-semibold whitespace-nowrap dark:text-white">pats.</span>
+            </a>
+          </div>
+          <ul class="space-y-2 mt-3 mr-6">
+            <li class="mb-6">
+              <a href="#" id="dashBtn"
+                class="flex cursor-pointer items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-600 transition ease-in-out delay-150 hover:-translate-y-1">
                 <svg class="w-6 h-6 fill-current text-gray-400" xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 512 512">
                   <path
@@ -30,9 +33,9 @@
                 </svg>
                 <span class="ml-3">Dashboard</span>
               </a>
-            </li>
-            <li>
-              <p href="#" class="flex items-center p-2 text-base font-normal rounded-lg text-gray-400 animate-pulse">
+            <li class="mb-6">
+              <p id="aboutBtn"
+                class="flex items-center p-2 text-base font-normal rounded-lg text-gray-400 animate-pulse">
                 <svg class="w-6 h-6 fill-current text-gray-400" xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 640 512">
                   <path
@@ -41,64 +44,82 @@
                 <span class="ml-3 whitespace-nowrap">About us</span>
               </p>
             </li>
+            </li>
           </ul>
         </div>
-
       </div>
-      <div class="flex-1 w-64 p-12 pr-16">
-        <h1 class="text-right text-5xl">About Us</h1>
-        <hr>
-        <img class='pt-3' class="h-8" src="/media/homepage.png" style="background-position: center center;
+    </div>
+
+    </div>
+    <div class="p-12 pr-16">
+      <h1 class="text-right text-5xl">About Us</h1>
+      <hr>
+      <img class='pt-3' class="h-8" src="/media/homepage.png" style="background-position: center center;
         background-repeat: no-repeat;
         background-attachment: fixed;
         background-size: cover; width:100%; height: 200px; object-fit: none;" alt="banner-img">
-        <p class="text-center text-white text-3xl font-semibold -translate-y-20">Meet the Team!</p>
+      <p class="text-center text-white text-3xl font-semibold -translate-y-20">Meet the Team!</p>
 
-      </div>
+    </div>
     </div>
     <div class="grid grid-cols-2 mr-1/2 justify-items-stretch translate-x-24">
       <div class="mb-6">
-        <div class="overflow-hidden w-2/3 relative shadow-lg ring-1 ring-black/5 rounded-xl flex items-center gap-6">
+        <div
+          class="overflow-hidden bg-white w-2/3 relative shadow-lg ring-1 ring-black/5 rounded-xl flex items-center gap-6">
           <img class="absolute -left-6 w-24 h-24 rounded-full shadow-lg" src="http://via.placeholder.com/200x200">
           <div class="flex flex-col py-5 pl-24">
-            <strong class="text-slate-900 text-sm font-medium dark:text-slate-200">Andrew Alfred</strong>
-            <span class="text-slate-500 text-sm font-medium dark:text-slate-400">Technical advisor</span>
+            <strong class="text-slate-900 text-sm font-medium dark:text-slate-200">Ryan Paynter</strong>
+            <span class="text-slate-500 text-sm font-medium dark:text-slate-400">Front End Specialist</span>
+            <a class="text-slate-500 text-sm font-medium dark:text-slate-400" href="#">Email.com</a>
+            <a class="text-slate-500 text-sm font-medium dark:text-slate-400" href="#">GitHub.com</a>
           </div>
         </div>
       </div>
       <div class="mb-6">
-        <div class="overflow-hidden w-2/3 relative shadow-lg ring-1 ring-black/5 rounded-xl flex items-center gap-6">
+        <div
+          class="overflow-hidden bg-white w-2/3 relative shadow-lg ring-1 ring-black/5 rounded-xl flex items-center gap-6">
           <img class="absolute -left-6 w-24 h-24 rounded-full shadow-lg" src="http://via.placeholder.com/200x200">
           <div class="flex flex-col py-5 pl-24">
-            <strong class="text-slate-900 text-sm font-medium dark:text-slate-200">Andrew Alfred</strong>
-            <span class="text-slate-500 text-sm font-medium dark:text-slate-400">Technical advisor</span>
+            <strong class="text-slate-900 text-sm font-medium dark:text-slate-200">David Grant</strong>
+            <span class="text-slate-500 text-sm font-medium dark:text-slate-400">Back End Specialist</span>
+            <a class="text-slate-500 text-sm font-medium dark:text-slate-400" href="#">Email.com</a>
+            <a class="text-slate-500 text-sm font-medium dark:text-slate-400" href="#">GitHub.com</a>
           </div>
         </div>
       </div class="mb-6">
       <div>
-        <div class="overflow-hidden w-2/3 relative shadow-lg ring-1 ring-black/5 rounded-xl flex items-center gap-6">
+        <div
+          class="overflow-hidden bg-white bg-white w-2/3 relative shadow-lg ring-1 ring-black/5 rounded-xl flex items-center gap-6">
           <img class="absolute -left-6 w-24 h-24 rounded-full shadow-lg" src="http://via.placeholder.com/200x200">
           <div class="flex flex-col py-5 pl-24">
-            <strong class="text-slate-900 text-sm font-medium dark:text-slate-200">Andrew Alfred</strong>
-            <span class="text-slate-500 text-sm font-medium dark:text-slate-400">Technical advisor</span>
+            <strong class="text-slate-900 text-sm font-medium dark:text-slate-200">Sean Mclellan</strong>
+            <span class="text-slate-500 text-sm font-medium dark:text-slate-400">Back End Specialist</span>
+            <a class="text-slate-500 text-sm font-medium dark:text-slate-400" href="#">Email.com</a>
+            <a class="text-slate-500 text-sm font-medium dark:text-slate-400" href="#">GitHub.com</a>
           </div>
         </div>
       </div>
       <div class="mb-6">
-        <div class="overflow-hidden w-2/3 relative shadow-lg ring-1 ring-black/5 rounded-xl flex items-center gap-6">
+        <div
+          class="overflow-hidden w-2/3 bg-white relative shadow-lg ring-1 ring-black/5 rounded-xl flex items-center gap-6">
           <img class="absolute -left-6 w-24 h-24 rounded-full shadow-lg" src="http://via.placeholder.com/200x200">
           <div class="flex flex-col py-5 pl-24">
-            <strong class="text-slate-900 text-sm font-medium dark:text-slate-200">Andrew Alfred</strong>
-            <span class="text-slate-500 text-sm font-medium dark:text-slate-400">Technical advisor</span>
+            <strong class="text-slate-900 text-sm font-medium dark:text-slate-200">Ben Brickhead</strong>
+            <span class="text-slate-500 text-sm font-medium dark:text-slate-400">Data Analyst</span>
+            <a class="text-slate-500 text-sm font-medium dark:text-slate-400" href="#">Email.com</a>
+            <a class="ttext-slate-500 text-sm font-medium dark:text-slate-400" href="#">GitHub.com</a>
           </div>
         </div>
       </div>
       <div class="translate-x-1/2 mb-6">
-        <div class="overflow-hidden w-2/3 relative shadow-lg ring-1 ring-black/5 rounded-xl flex items-center gap-6">
+        <div
+          class="overflow-hidden w-2/3 bg-white relative shadow-lg ring-1 ring-black/5 rounded-xl flex items-center gap-6">
           <img class="absolute -left-6 w-24 h-24 rounded-full shadow-lg" src="http://via.placeholder.com/200x200">
           <div class="flex flex-col py-5 pl-24">
-            <strong class="text-slate-900 text-sm font-medium dark:text-slate-200">Andrew Alfred</strong>
-            <span class="text-slate-500 text-sm font-medium dark:text-slate-400">Technical advisor</span>
+            <strong class="text-slate-900 text-sm font-medium dark:text-slate-200">Ansh Sawant</strong>
+            <span class="text-slate-500 text-sm font-medium dark:text-slate-400">Data Analyst</span>
+            <a class="text-slate-500 text-sm font-medium dark:text-slate-400" href="#">Email.com</a>
+            <a class="text-slate-500 text-sm font-medium dark:text-slate-400" href="#">GitHub.com</a>
           </div>
         </div>
       </div>
@@ -112,7 +133,7 @@
       window.location = '/';
     }
     aboutBtn.onclick = function () {
-      window.location = '/home';
+      window.location = '/dashboard-2018';
     }
   </script>
 
