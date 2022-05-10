@@ -10,35 +10,42 @@
 
 
 <body>
-  <div id="tester" style="width:500px;height:300px;"></div>
+  <div id="StackBars" style="width:1200px;height:600px;"></div>
   <script>
-    const runGraphTest = () => {
-      fetch('/api/transit', {
+
+    const runStackedBars = () => {
+      fetch('/api/StopVsRouteVsCount2018_2019', {
         method: 'GET'
       })
         .then((response) => response.json())
-        .then((transitData) => {
+        .then((StopVsRouteVsCount2018_2019) => {
 
           const a = []
           const b = []
+          const c = []
           var i = 0
-          for (const element of transitData) {
+          for (const element of StopVsRouteVsCount2018_2019) {
             a[i] = element.Stop;
             b[i] = element.Count;
+            c[i] = element.Route;
             i++
           }
-          var data = [
-            {
-              x: a,
+          var trace1 = {
+            x: a,
+            y: b,
+            name: 'Stop',
+            type: 'scatter'
+          };
 
-              y: b,
+          var trace2 = {
+            x: c,
+            y: b,
+            name: 'Route',
+            type: 'scatter'
+          };
+          var data = [trace1, trace2];
 
-              type: 'bar'
-
-            }
-          ];
-
-          Plotly.newPlot('tester', data);
+          Plotly.newPlot('StackBars', data);
 
         })
         .catch((error) => {
@@ -46,10 +53,9 @@
         });
     };
 
-    runGraphTest();
-
-
+    runStackedBars();
   </script>
+  </div>
 
   <div id="Stackbar" style="width:500px;height:300px;"></div>
   <script>
