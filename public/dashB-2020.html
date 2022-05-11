@@ -49,10 +49,10 @@
   <div class=" p-12 pr-16">
     <div class="flex flex-row">
       <div class="basis-1/4">
-        <div class="flex justify-between">
+        <div class="flex">
           <!-- transition ease-in-out delay-150 border-b-4 hover:border-b-8 border-green-900 pt-6 hover:pt-5 -->
           <a id="2018"
-            class="transition ease-in-out delay-150 border-b-4 pt-6 border-green-900 hover:scale-125">2018|19</a>
+            class="transition ease-in-out delay-150 border-b-4 pt-6 mr-3 border-green-900 hover:scale-125">2018|19</a>
           <a id="2019"
             class="transition ease-in-out delay-150 border-b-4 pt-6 border-green-900 hover:scale-125">2019|20</a>
         </div>
@@ -326,63 +326,12 @@
 
 
   <div class="flex lg:flex-row sm:flex-col lg:justify-center sm:justify-around mx-16 sm:mt-12 lg:mt-0">
-    <div class="flex-initial mr-8 bg-white h-96 lg:w-1/2 sm:w-full rounded border-2 border-slate-50 shadow-xl">
-      <p class="ml-3 font-extrabold text-lg pt-3">Morning vs Afternoon Bus Riders</p>
-      <p class="ml-6 text-slate-400">Pie Chart</p>
-      <hr>
-      <div class="">
-        <div id="DoubleLineChart" style="width:600px;height:315px;"></div>
-        <script>
-          const runDoubleLineChart = () => {
-            fetch('/api/transit', {
-              method: 'GET'
-            })
-              .then((response) => response.json())
-              .then((transitData) => {
-
-                const a = []
-                const b = []
-                var i = 0
-                for (const element of transitData) {
-                  a[i] = element.Stop;
-                  b[i] = element.Count;
-                  i++
-                }
-                var trace1 = {
-                  x: ['7am', '8am', '9am', '10am', '11am'],
-                  y: [725, 362, 69, 28, 27],
-                  type: 'scatter',
-                  name: 'Morning'
-
-                };
-
-                var trace2 = {
-                  x: ['12pm', '1pm', '2pm', '3pm', '4pm'],
-                  y: [900, 892, 790, 999, 786, 965, 867],
-                  type: 'scatter',
-                  name: 'Afternoon'
-                };
-
-                var data = [trace1, trace2];
-
-                Plotly.newPlot('DoubleLineChart', data);
-
-              })
-              .catch((error) => {
-                console.error('Error:', error);
-              });
-          };
-
-          runDoubleLineChart();
-        </script>
-      </div>
-    </div>
     <div class="flex-initial mr-8 h-96 bg-white lg:w-8/12 sm:w-full rounded border-2 border-slate-50 shadow-xl">
       <p class="ml-3 font-extrabold text-lg pt-3">Number of Riders Per Stop</p>
       <p class="ml-6 text-slate-400">Bar Chart</p>
       <hr>
       <div class="">
-        <div id="Bar2" style="width:600px;height:320px;"></div>
+        <div id="Bar2" style="width:800px;height:320px;"></div>
         <script>
           const runBarChart2 = () => {
             fetch('/api/StopVsCount2020_2021', {

@@ -2,7 +2,6 @@
 // We are linking our routes to a series of "data" sources.
 // These data sources hold arrays of information on table-data, waitinglist, etc.
 
-const transitData = require('../data/July2020TransitData');
 const TimeVsPassengers2018_2019 = require('../data/TimeVsPassengers2018-2019');
 const TimeVsPassengers2019_2020 = require('../data/TimeVsPassengers2019-2020');
 const TimeVsPassengers2020_2021 = require('../data/TimeVsPassengers2020-2021');

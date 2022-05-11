@@ -68,7 +68,7 @@
     background-attachment: fixed;
     background-size: cover; width:100%; height: 200px; object-fit: none;" alt="banner-img">
     <a href="https://drive.google.com/file/d/1G36eO9E4yComQ8YLGUiXwGLU6RcRL7hq/view?usp=sharing">
-      <p class="-translate-y-5" style="color: white;">
+      <p class="-translate-y-5" style="color: white; width:150px;">
         Download Raw Data</p>
     </a>
   </div>
@@ -78,7 +78,7 @@
       <p class="ml-6 text-slate-400">Bar Chart</p>
       <hr>
       <div class="w-full">
-        <div id="tester" class="w-full h-64"></div>
+        <div id="tester" class="w-96 h-60"></div>
         <script>
           const runBarChart = () => {
             fetch('/api/TimeVsPassengers2018_2019', {
@@ -237,7 +237,7 @@
       <p class="ml-6 text-slate-400">Pie Chart</p>
       <hr>
       <div class="">
-        <div id="PieChart2" style="width:600px;height:300px;"></div>
+        <div id="PieChart2"></div>
         <script>
           const runPieChart2 = () => {
             fetch('/api/BusVsCount2018_2019', {
@@ -264,8 +264,8 @@
                   }
                 ];
                 var layout = {
-                  height: 255,
-                  width: 384
+                  height: 300,
+                  width: 500
                 };
                 var config = { responsive: true }
 
@@ -330,63 +330,12 @@
 
 
   <div class="flex lg:flex-row sm:flex-col lg:justify-center sm:justify-around mx-16 sm:mt-12 lg:mt-0">
-    <div class="flex-initial mr-8 bg-white h-96 lg:w-1/2 sm:w-full rounded border-2 border-slate-50 shadow-xl">
-      <p class="ml-3 font-extrabold text-lg pt-3">Morning vs Afternoon Bus Riders</p>
-      <p class="ml-6 text-slate-400">Pie Chart</p>
-      <hr>
-      <div class="">
-        <div id="DoubleLineChart" style="width:600px;height:315px;"></div>
-        <script>
-          const runDoubleLineChart = () => {
-            fetch('/api/transit', {
-              method: 'GET'
-            })
-              .then((response) => response.json())
-              .then((transitData) => {
-
-                const a = []
-                const b = []
-                var i = 0
-                for (const element of transitData) {
-                  a[i] = element.Stop;
-                  b[i] = element.Count;
-                  i++
-                }
-                var trace1 = {
-                  x: ['7am', '8am', '9am', '10am', '11am'],
-                  y: [725, 362, 69, 28, 27],
-                  type: 'scatter',
-                  name: 'Morning'
-
-                };
-
-                var trace2 = {
-                  x: ['12pm', '1pm', '2pm', '3pm', '4pm'],
-                  y: [900, 892, 790, 999, 786, 965, 867],
-                  type: 'scatter',
-                  name: 'Afternoon'
-                };
-
-                var data = [trace1, trace2];
-
-                Plotly.newPlot('DoubleLineChart', data);
-
-              })
-              .catch((error) => {
-                console.error('Error:', error);
-              });
-          };
-
-          runDoubleLineChart();
-        </script>
-      </div>
-    </div>
     <div class="flex-initial mr-8 h-96 bg-white lg:w-8/12 sm:w-full rounded border-2 border-slate-50 shadow-xl">
       <p class="ml-3 font-extrabold text-lg pt-3">Most Popular Stops</p>
       <p class="ml-6 text-slate-400">Bar Chart</p>
       <hr>
       <div class="">
-        <div id="Bar2" style="width:600px;height:320px;"></div>
+        <div id="Bar2" style="width:800px;height:300px;"></div>
         <script>
           const runBarChart2 = () => {
             fetch('/api/StopVsCount2018_2019', {
