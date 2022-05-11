@@ -13,7 +13,7 @@ git branch -v
 
 create a branch
 git checkout -b <name>
-
+hx
 delete a branch
 git branch -d <name>
 
